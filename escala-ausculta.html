@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/escala.css">
+  <title>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</title>
+</head>
+<body>
+  <header>
+    <img src="./assets/img/logo.jpeg" alt="" class="logo">
+    <h1>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</h1>
+  </header>
+  <main>
+    <div class="title">
+      <h2>Escolha :</h2>
+    </div>
+      <div class="escala">
+        <h2>Escala de Coma de Glasgow</h2>
+        <form>
+            <label for="abertura_ocular">Abertura Ocular:</label><br>
+            <select id="abertura_ocular" name="abertura_ocular">
+              <option value="Selecione..." selected>Selecione...</option>  
+              <option value="4">Espontânea</option>
+                <option value="3">Ao som</option>
+                <option value="2">Ao estímulo doloroso</option>
+                <option value="1">Nenhuma</option>
+            </select><br><br>
+            <label for="resposta_verbal">Resposta Verbal:</label><br>
+            <select id="resposta_verbal" name="resposta_verbal">
+              <option value="Selecione..." selected>Selecione...</option>  
+                <option value="5">Orientado e conversando</option>
+                <option value="4">Desorientado, mas conversando</option>
+                <option value="3">Respostas inadequadas</option>
+                <option value="2">Sons incompreensíveis</option>
+                <option value="1">Nenhuma</option>
+            </select><br><br>
+            <label for="resposta_motora">Resposta Motora:</label><br>
+            <select id="resposta_motora" name="resposta_motora">
+              <option value="Selecione..." selected>Selecione...</option>  
+                <option value="6">Obedece comandos</option>
+                <option value="5">Localiza estímulo doloroso</option>
+                <option value="4">Retirada à dor</option>
+                <option value="3">Flexão anormal (decorticação)</option>
+                <option value="2">Extensão anormal (descerebração)</option>
+                <option value="1">Nenhuma</option>
+            </select><br><br>
+            <br>
+            <input class="calcular-pontuação" type="button" value="Calcular Pontuação" onclick="calcularPontuacao()">
+            <span id="pontuacao"></span>
+        </form>
+      </div>
+      <div class="ausculta">
+        <h2>Ausculta Pulmonar</h2>
+        <h3>Murmúrios Vesiculares:</h3>
+        <div class="">
+        <form>
+            <input type="radio" id="opcao1" name="murmurios" value="Murmúrios vesiculares normais">
+            <label for="opcao1">Murmúrios vesiculares normais</label><br>
+            <input type="radio" id="opcao2" name="murmurios" value="Murmúrios vesiculares diminuídos">
+            <label for="opcao2">Murmúrios vesiculares diminuídos</label><br>
+            <input type="radio" id="opcao3" name="murmurios" value="Murmúrios vesiculares abolidos">
+            <label for="opcao3">Murmúrios vesiculares abolidos</label><br><br>
+          </form>
+        </div>
+    
+            <h3>Ruídos Adventícios:</h3>
+              <div class="">
+                <h4>Descontínuos:</h4>
+                <form>
+                  <input type="radio" id="opcao4" name="ruidos" value="Sem ruídos adventícios">
+                  <label for="opcao4">Sem ruídos adventícios</label><br>
+                  <input type="radio" id="opcao5" name="ruidos" value="Estertores finos">
+                  <label for="opcao5">Estertores finos</label><br>
+                  <input type="radio" id="opcao6" name="ruidos" value="Estertores grossos">
+                  <label for="opcao6">Estertores grossos</label><br><br>
+                </form>
+              </div>
+            
+            <div class="">
+              <h4>Contínuos:</h4>
+              <form>
+                <input type="radio" id="opcao7" name="ruidos" value="Roncos">
+                <label for="opcao7">Roncos</label><br>
+                <input type="radio" id="opcao8" name="ruidos" value="Sibilos">
+                <label for="opcao8">Sibilos</label><br>
+                <input type="radio" id="opcao9" name="ruidos" value="Estridor">
+                <label for="opcao9">Estridor</label><br><br>
+              </form>
+            </div>
+    
+            <div class="">
+              <h3>Sopros:</h3>
+              <form>
+                <input type="radio" id="opcao10" name="ruidos" value="Sopros">
+                <label for="opcao10">Sopros</label><br><br>
+              </form>
+            </div>
+    
+            <div class="">
+              <h3>Atrito Pleural:</h3>
+              <form action="">
+                <input type="radio" id="opcao11" name="ruidos" value="Atrito pleural">
+                <label for="opcao11">Atrito pleural</label><br><br>
+              </form>
+            </div>
+    
+        <input class="verificar resultado" type="button" value="Verificar Resultado" onclick="verificarResposta()">
+        <h3>Resultado:</h3>
+        <div id="resultado"></div>
+      </div>
+
+      <div class="proximo">
+        <button><a href="sinais.html">Voltar</a></button>
+        <button><a href="exame.html">Próxima</a></button>
+      </div>
+
+  </main>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
