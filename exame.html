@@ -186,9 +186,45 @@
           <label for="opcao12">Não se aplica</label><br>
           <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
           <br>
-          <label for="anotacao">Observações adicionais:</label><br>
-          <textarea id="anotacao" name="anotacao" rows="5" cols="50"></textarea><br><br>
-      </form>
+
+          <!DOCTYPE html>
+<html>
+<head>
+    <title>Seletor de Região e Osso do Corpo</title>
+    <style>
+        .lesao-osso {
+            width: 200px;
+        }
+    </style>
+    <h1>Seletor de Região e Osso do Corpo</h1>
+    <fieldset>
+        <legend>Selecione as regiões do corpo:</legend>
+        <label>
+            <input type="checkbox" name="regiao" value="crânio" onchange="selecionarRegiao()"> Crânio
+        </label><br>
+        <label>
+            <input type="checkbox" name="regiao" value="tórax" onchange="selecionarRegiao()"> Tórax
+        </label><br>
+        <label>
+            <input type="checkbox" name="regiao" value="membros-superiores" onchange="selecionarRegiao()"> Membros Superiores
+        </label><br>
+        <label>
+            <input type="checkbox" name="regiao" value="membros-inferiores" onchange="selecionarRegiao()"> Membros Inferiores
+        </label><br>
+        <label>
+            <input type="checkbox" name="regiao" value="pescoço" onchange="selecionarRegiao()"> Pescoço
+        </label>
+    </fieldset>
+    <br>
+    <label for="ossos-select">Selecione os ossos:</label>
+    <div id="ossos-container"></div>
+    <br>
+    <div id="caixas-retorno-osso"></div>
+    <button class="osso-verificar" onclick="verificarLesaoOsso()">Verificar Lesão no Osso</button>
+    <br><br>
+    <label for="anotacao">Observações adicionais:</label><br>
+    <textarea id="anotacao" name="anotacao" rows="5" cols="50"></textarea><br><br>
+    </form>
 
     
     <div class="proximo">

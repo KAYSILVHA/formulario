@@ -54,3 +54,12 @@ textarea{
   background-color: lightgray;
   
 }
+
+fieldset{
+  padding: 10px;
+}
+
+.osso-verificar{
+  width: 200px;
+  margin: 10px;
+}

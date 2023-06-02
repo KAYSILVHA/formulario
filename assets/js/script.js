@@ -78,3 +78,141 @@ function calcularPontuacao() {
 
 
 
+function selecionarRegiao() {
+  var regioesSelect = document.getElementsByName("regiao");
+  var selectedRegioes = [];
+
+  // Obter as regiões selecionadas
+  for (var i = 0; i < regioesSelect.length; i++) {
+      if (regioesSelect[i].checked) {
+          selectedRegioes.push(regioesSelect[i].value);
+      }
+  }
+
+  var ossosContainer = document.getElementById("ossos-container");
+
+  // Limpar os ossos selecionados
+  ossosContainer.innerHTML = "";
+
+  // Adicionar ossos baseado nas regiões selecionadas
+  for (var i = 0; i < selectedRegioes.length; i++) {
+      var regiao = selectedRegioes[i];
+
+      if (regiao === "crânio") {
+          adicionarOpcaoOsso("Frontal", "frontal");
+          adicionarOpcaoOsso("Occipital", "occipital");
+          adicionarOpcaoOsso("Parietal", "parietal");
+          adicionarOpcaoOsso("Temporal", "temporal");
+          adicionarOpcaoOsso("Esfenóide", "esfenóide");
+          adicionarOpcaoOsso("Maxila", "maxila");
+          adicionarOpcaoOsso("Mandíbula", "mandíbula");
+      } else if (regiao === "tórax") {
+          adicionarOpcaoOsso("Esterno", "esterno");
+          adicionarOpcaoOsso("Costelas", "costelas");
+          adicionarOpcaoOsso("Escápula", "escapula");
+          adicionarOpcaoOsso("Clavícula", "clavicula");
+          adicionarOpcaoOsso("Vértebras Torácicas", "vertebras-toracicas");
+      } else if (regiao === "membros-superiores") {
+          adicionarOpcaoOsso("Úmero", "umero");
+          adicionarOpcaoOsso("Rádio", "radio");
+          adicionarOpcaoOsso("Ulna", "ulna");
+          adicionarOpcaoOsso("Cúbito", "cubito");
+          adicionarOpcaoOsso("Escápula", "escapula-ms");
+          adicionarOpcaoOsso("Clavícula", "clavicula-ms");
+          adicionarOpcaoOsso("Carpais", "carpais");
+          adicionarOpcaoOsso("Metacarpais", "metacarpais");
+          adicionarOpcaoOsso("Falanges", "falanges");
+      } else if (regiao === "membros-inferiores") {
+          adicionarOpcaoOsso("Fêmur", "femur");
+          adicionarOpcaoOsso("Tíbia", "tibia");
+          adicionarOpcaoOsso("Fíbula", "fibula");
+          adicionarOpcaoOsso("Rótula", "rotula");
+          adicionarOpcaoOsso("Vértebras Lombar", "vertebras-lombar");
+          adicionarOpcaoOsso("Escápula", "escapula-mi");
+          adicionarOpcaoOsso("Fíbula", "fibula-mi");
+          adicionarOpcaoOsso("Tarsais", "tarsais");
+          adicionarOpcaoOsso("Metatarsais", "metatarsais");
+          adicionarOpcaoOsso("Falanges", "falanges-mi");
+      } else if (regiao === "pescoço") {
+          adicionarOpcaoOsso("Cervical 1 (Atlas)", "cervical-1");
+          adicionarOpcaoOsso("Cervical 2 (Áxis)", "cervical-2");
+          adicionarOpcaoOsso("Cervicais 3-7", "cervicais-3-7");
+          adicionarOpcaoOsso("Hióide", "hióide");
+      }
+  }
+}
+
+function adicionarOpcaoOsso(nome, valor) {
+  var ossosContainer = document.getElementById("ossos-container");
+
+  var checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.name = "ossos";
+  checkbox.value = valor;
+
+  var label = document.createElement("label");
+  label.appendChild(checkbox);
+  label.appendChild(document.createTextNode(nome));
+
+  ossosContainer.appendChild(label);
+  ossosContainer.appendChild(document.createElement("br"));
+
+  checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+          adicionarCaixaRetornoOsso(nome);
+      } else {
+          removerCaixaRetornoOsso(nome);
+      }
+  });
+}
+
+function adicionarCaixaRetornoOsso(nome) {
+  var caixasRetornoOsso = document.getElementById("caixas-retorno-osso");
+
+  var label = document.createElement("label");
+  label.appendChild(document.createTextNode(nome + ": "));
+
+  var input = document.createElement("input");
+  input.type = "text";
+  input.name = nome.toLowerCase().replace(/\s/g, "-") + "-lesao";
+  input.classList.add("lesao-osso");
+
+  label.appendChild(input);
+
+  caixasRetornoOsso.appendChild(label);
+  caixasRetornoOsso.appendChild(document.createElement("br"));
+}
+
+function removerCaixaRetornoOsso(nome) {
+  var caixasRetornoOsso = document.getElementById("caixas-retorno-osso");
+  var inputName = nome.toLowerCase().replace(/\s/g, "-") + "-lesao";
+
+  var labels = caixasRetornoOsso.getElementsByTagName("label");
+  for (var i = 0; i < labels.length; i++) {
+      var input = labels[i].getElementsByTagName("input")[0];
+      if (input.name === inputName) {
+          caixasRetornoOsso.removeChild(labels[i]);
+          break;
+      }
+  }
+}
+
+function verificarLesaoOsso() {
+  var caixasRetornoOsso = document.getElementById("caixas-retorno-osso");
+  var labels = caixasRetornoOsso.getElementsByTagName("label");
+
+  var lesaoOssos = [];
+
+  for (var i = 0; i < labels.length; i++) {
+      var input = labels[i].getElementsByTagName("input")[0];
+      if (input.value !== "") {
+          lesaoOssos.push(labels[i].innerText.replace(": ", "") + " - " + input.value);
+      }
+  }
+
+  if (lesaoOssos.length > 0) {
+      alert("Lesões nos ossos:\n\n" + lesaoOssos.join("\n"));
+  } else {
+      alert("Não há lesões nos ossos selecionados.");
+  }
+}
