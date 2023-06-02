@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/posicao.css">
-  <title>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</title>
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="shortcut icon" href="https://images2.imgbox.com/99/93/gSWGx6Jf_o.png" type="image/x-icon">
+  <title>Formulário de Dados do Paciente</title>
 </head>
 <body>
   <header>
-    <img src="./assets/img/logo.jpeg" alt="" class="logo">
-    <h1>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</h1>
+    <img src="https://images2.imgbox.com/e7/0f/YZcw4PaW_o.jpeg" alt="" class="logo">
+    <h1>Formulário de Dados do Paciente</h1>
   </header>
   <main>
     <div class="title">
@@ -22,26 +24,71 @@
     <div class="posicao">
       <div class="">
         <h3>Qual é a posição do paciente no leito?</h3>
-                <form>
-                  <label><input type="radio" name="posicao" value="Decúbito dorsal"> Decúbito dorsal</label><br>
-                  <label><input type="radio" name="posicao" value="Decúbito ventral"> Decúbito ventral</label><br>
-                  <label><input type="radio" name="posicao" value="Decúbito lateral"> Decúbito lateral</label><br>
-                  <label><input type="radio" name="posicao" value="Decúbito lateral esquerdo"> Decúbito lateral esquerdo</label><br>
-                  <label><input type="radio" name="posicao" value="Decúbito lateral direito"> Decúbito lateral direito</label><br>
-                </form>
+          <form>
+            <label for="posicao">Posição do paciente :</label>
+            <select name="posicao" id="posicao">
+              <option value="Selecione" selected>Selecione...</option>
+              <option value="Decúbito dorsal (de costas)">Decúbito dorsal (de costas)</option>
+              <option value="Decúbito ventra (de barriga para baixo)">Decúbito ventra (de barriga para baixo)</option>
+              <option value="Decúbito lateral">Decúbito lateral</option>
+              <option value="Decúbito lateral esquerdo">Decúbito lateral esquerdo</option>
+              <option value="Decúbito lateral direito">Decúbito lateral direito</option>
+              <option value="Fowler alto">Fowler alto</option>
+              <option value="Fowler médio">Fowler médio</option>
+              <option value="Fowler baixo">Fowler baixo</option>
+              <option value="Posição de Trendelenburg">Posição de Trendelenburg</option>
+              <option value="Posição de Trendelenburg invertida">Posição de Trendelenburg invertida</option>
+              <option value="Posição de Sim's">Posição de Sim's</option>
+              <option value="Posição de Genupeitoral">Posição de Genupeitoral</option>
+              <option value="Posição de Litotomia">Posição de Litotomia</option>
+              <option value="Posição de Cocoras">Posição de Cocoras</option>
+              <option value="Posição de Semi-Fowler">Posição de Semi-Fowler</option>
+              <option value="Posição de Decúbito Lateral com Pernas Flexionadas">Posição de Decúbito Lateral com Pernas Flexionadas</option>
+              <option value="Posição de Jackknife">Posição de Jackknife</option>
+              <option value="Posição de Trenelenburg lateral">Posição de Trenelenburg lateral</option>
+              <option value="Posição de Trenelenburg lateral invertida">Posição de Trenelenburg lateral invertida</option>
+              <option value="Posição de Litotomia modificada">Posição de Litotomia modificada</option>
+              <option value="Posição de Fowler alta com pernas suspensas">Posição de Fowler alta com pernas suspensas</option>
+              <option value="Posição de Semi-Fowler lateral">Posição de Semi-Fowler lateral</option>
+              <option value="Posição de Lateral Sim's">Posição de Lateral Sim's</option>
+              <option value="Posição de Decúbito Ventral com Hiperextensão">Posição de Decúbito Ventral com Hiperextensão</option>
+              <option value="Posição de Decúbito Lateral com Quadril Elevado"> Posição de Decúbito Lateral com Quadril Elevado</option>
+              <option value="Posição de Decúbito Lateral com Pernas Estendidas">Posição de Decúbito Lateral com Pernas Estendidas</option>
+              <option value="Posição de Litotomia invertida">Posição de Litotomia invertida</option>
+              <option value="Posição de Litotomia modificada invertida">Posição de Litotomia modificada invertida</option>
+              <option value="Posição de Cócoras lateral">Posição de Cócoras lateral</option>
+              <option value="Posição de Fowler alta com pernas suspensas lateral">Posição de Fowler alta com pernas suspensas lateral</option>
+              <option value="Posição de Decúbito Ventral com Hiperextensão">Posição de Decúbito Ventral com Hiperextensão</option>
+              <option value="Posição de Sims modificada">Posição de Sims modificada</option>
+              <option value="Posição de Fowler alta com perna estendida">Posição de Fowler alta com perna estendida</option>
+              <option value="Posição de Fowler alta com perna estendida">Posição de Fowler alta com perna estendida</option>
+              <option value="Posição de DectRegenerate response > Elevado">Posição de DectRegenerate response > Elevado</option>
+              <option value="Não se aplica">Não se aplica</option>
+            </select>
+          </form>
         
       </div>
       <div class="">
         <h3>Qual é a posição da cabeceira do leito?</h3>
-                
         <form>
-          <label><input type="radio" name="cabeceira" value="45 graus posição fowler"> 45 graus posição fowler</label><br>
+          <label for="cabeceira">Posição da cabeceira</label>
+          <select name="cabeceira" id="cabeceira">
+            <option value="Selecione" selected>Selecione...</option>
+            <option value="Posição horizontal">Posição horizontal</option>
+            <option value="Posição de Fowler">Posição de Fowler</option>
+            <option value="Posição de Semi-Fowler">Posição de Semi-Fowler</option>
+            <option value="Posição de Trendelenburg">Posição de Trendelenburg</option>
+            <option value="Posição de Reverse Trendelenburg">Posição de Reverse Trendelenburg</option>
+            <option value="Posição de Dorso-Prone">Posição de Dorso-Prone</option>
+            <option value="Posição de Dorso-Lateral">Posição de Dorso-Lateral</option>
+            <option value="Posição de Sim's">Posição de Sim's</option>
+            <option value="Posição de Litotomia">Posição de Litotomia</option>
+            <option value="Posição de Genupeitoral">Posição de Genupeitoral</option>
+            <option value="Posição de Sim's Modificada">Posição de Sim's Modificada</option>
+            <option value="Posição de Sentado">Posição de Sentado</option>
+            <option value="Não se aplica">Não se aplica</option>
+          </select>        
           
-          <label><input type="radio" name="cabeceira" value="Plana"> Plana</label><br>
-          
-          <label><input type="radio" name="cabeceira" value="Inclinada para baixo"> Inclinada para baixo</label><br>
-          
-          <label><input type="radio" name="cabeceira" value="Inclinada para cima"> Inclinada para cima</label><br>
         </form>
                 
       </div>
@@ -50,6 +97,7 @@
         <form>
           <label><input type="radio" name="grades" value="Elevadas"> Elevadas</label>
           <label><input type="radio" name="grades" value="Baixas"> Baixas</label>
+          <label><input type="radio" name="grades" value="nao"> Não se aplica</label>
         </form>
       </div>
     </div>

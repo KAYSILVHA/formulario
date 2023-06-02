@@ -8,12 +8,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/exame.css">
-  <title>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</title>
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="shortcut icon" href="https://images2.imgbox.com/99/93/gSWGx6Jf_o.png" type="image/x-icon">
+  <title>Formulário de Dados do Paciente</title>
 </head>
 <body>
   <header>
-    <img src="./assets/img/logo.jpeg" alt="" class="logo">
-    <h1>Formulário de Dados do Paciente ʏ𝒶𝓃 ᴋ𝒶𝓁𝒾ℯ𝓁</h1>
+    <img src="https://images2.imgbox.com/e7/0f/YZcw4PaW_o.jpeg" alt="" class="logo">
+    <h1>Formulário de Dados do Paciente</h1>
   </header>
   <main>
     <div class="title">
@@ -25,15 +27,26 @@
           <h3>Extremidades:</h3>
           <input type="radio" id="opcao1" name="extremidades" value="Extremidades aquecidas e com boa perfusão">
           <label for="opcao1">Extremidades aquecidas e com boa perfusão</label><br>
+          <input type="radio" id="opcao2" name="extremidades" value="Extremidades frias e com boa perfusão">
+          <label for="opcao2">Extremidades frias com boa perfusão</label><br>
           <input type="radio" id="opcao2" name="extremidades" value="Extremidades frias e com má perfusão">
-          <label for="opcao2">Extremidades frias e com má perfusão</label><br>
+          <label for="opcao4">Extremidades frias e com má perfusão</label><br>
           <input type="radio" id="opcao3" name="extremidades" value="Extremidades assimétricas">
-          <label for="opcao3">Extremidades assimétricas</label><br><br>
+          <label for="opcao3">Extremidades assimétricas</label><br>
+          <input type="radio" id="opcao12" name="extremidades" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
           <h3>Tempo de Enchimento Capilar:</h3>
-          <input type="radio" id="opcao4" name="tempo" value="Tempo de enchimento capilar <5s">
+          <input type="radio" id="opcao4" name="tempo" value="Tempo de enchimento capilar menor 5s">
           <label for="opcao4">Tempo de enchimento capilar menor que 5 segundos</label><br>
-          <input type="radio" id="opcao5" name="tempo" value="Tempo de enchimento capilar >5s">
-          <label for="opcao5">Tempo de enchimento capilar maior que 5 segundos</label><br><br>
+          <input type="radio" id="opcao5" name="tempo" value="Tempo de enchimento capilar maior 5s">
+          <label for="opcao5">Tempo de enchimento capilar maior que 5 segundos</label><br>
+          <input type="radio" id="opcao12" name="tempo" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
+
           <h3>Edema:</h3>
           <input type="radio" id="opcao6" name="edema" value="Sem edema">
           <label for="opcao6">Sem edema</label><br>
@@ -42,17 +55,29 @@
           <input type="radio" id="opcao8" name="edema" value="Edema em membro inferior">
           <label for="opcao8">Edema em membro inferior</label><br>
           <input type="radio" id="opcao8" name="edema" value="Edema em membro inferior">
-          <label for="opcao8">Edema em membro inferior e superior</label><br><br>
+          <label for="opcao8">Edema em membro inferior e superior</label><br>
+          <input type="radio" id="opcao12" name="edema" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+          
           <h3>Turgência Jugular:</h3>
           <input type="radio" id="opcao9" name="turgencia" value="Sem turgência jugular">
           <label for="opcao9">Sem turgência jugular</label><br>
           <input type="radio" id="opcao10" name="turgencia" value="Turgência jugular presente">
-          <label for="opcao10">Turgência jugular presente</label><br><br>
+          <label for="opcao10">Turgência jugular presente</label><br>
+          <input type="radio" id="opcao12" name="turgencia" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+          
           <h3>Ausculta Cardíaca:</h3>
           <input type="radio" id="opcao11" name="ausculta" value="Ritmo cardíaco regular com duas bulhas normofonéticas">
           <label for="opcao11">Ritmo cardíaco regular com duas bulhas normofonéticas (B1 e B2)</label><br>
           <input type="radio" id="opcao12" name="ausculta" value="Ritmo cardíaco irregular">
-          <label for="opcao12">Ritmo cardíaco irregular</label><br><br>
+          <label for="opcao12">Ritmo cardíaco irregular</label><br>
+          <input type="radio" id="opcao12" name="ausculta" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+          
           <h3>Tipo de Sopro Cardíaco:</h3>
           <input type="radio" id="opcao13" name="sopro" value="Sem sopro cardíaco">
           <label for="opcao13">Sem sopro cardíaco</label><br>
@@ -61,7 +86,11 @@
           <input type="radio" id="opcao15" name="sopro" value="Sopro diastólico">
           <label for="opcao15">Sopro diastólico</label><br>
           <input type="radio" id="opcao16" name="sopro" value="Sopro contínuo">
-          <label for="opcao16">Sopro contínuo</label><br><br>
+          <label for="opcao16">Sopro contínuo</label><br>
+          <input type="radio" id="opcao12" name="sopro" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
           <h3>Acesso Venoso Puncionado:</h3>
           <input type="radio" id="opcao17" name="acesso" value="Sem acesso venoso puncionado">
           <label for="opcao17">Sem acesso venoso puncionado</label><br>
@@ -70,45 +99,80 @@
           <input type="radio" id="opcao19" name="acesso" value="Acesso venoso puncionado em membro inferior">
           <label for="opcao19">Acesso venoso puncionado em membro inferior</label><br>
           <input type="radio" id="opcao19" name="acesso" value="Acesso venoso puncionado em membro inferior">
-          <label for="opcao19">Acesso venoso central puncionado</label><br><br>
+          <label for="opcao19">Acesso venoso central puncionado</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br><br>
+          
+          <h3>Exame Abdominal:</h3>
           <input type="radio" id="opcao1" name="abdome" value="Abdome plano">
           <label for="opcao1">Abdome plano</label><br>
           <input type="radio" id="opcao2" name="abdome" value="Abdome distendido">
           <label for="opcao2">Abdome distendido</label><br>
           <input type="radio" id="opcao3" name="abdome" value="Abdome tenso">
-          <label for="opcao3">Abdome tenso</label><br><br>
+          <label for="opcao3">Abdome tenso</label><br>
+          <input type="radio" id="opcao12" name="abdome" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
+
           <h3>Dor à Palpação:</h3>
           <input type="radio" id="opcao4" name="dor" value="Sem dor à palpação">
           <label for="opcao4">Sem dor à palpação</label><br>
           <input type="radio" id="opcao5" name="dor" value="Dor à palpação presente">
-          <label for="opcao5">Dor à palpação presente</label><br><br>
+          <label for="opcao5">Dor à palpação presente</label><br>
+          <input type="radio" id="opcao12" name="dor" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
+
+
           <h3>Ruídos Hidroaéreos:</h3>
           <input type="radio" id="opcao6" name="ruidos" value="Ruídos hidroaéreos presentes em 4 quadrantes">
           <label for="opcao6">Ruídos hidroaéreos presentes em 4 quadrantes</label><br>
           <input type="radio" id="opcao7" name="ruidos" value="Diminuição dos ruídos hidroaéreos">
-          <label for="opcao7">Diminuição dos ruídos hidroaéreos</label><br><br>
+          <label for="opcao7">Diminuição dos ruídos hidroaéreos</label><br>
+          <input type="radio" id="opcao12" name="ruidos" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+          
           <h3>Massa Palpável:</h3>
           <input type="radio" id="opcao8" name="massa" value="Sem massa palpável">
           <label for="opcao8">Sem massa palpável</label><br>
           <input type="radio" id="opcao9" name="massa" value="Massa palpável presente">
-          <label for="opcao9">Massa palpável presente</label><br><br>
+          <label for="opcao9">Massa palpável presente</label><br>
+          <input type="radio" id="opcao12" name="massa" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
+
+
           <h3>Eliminações Fisiológicas:</h3>
           <input type="radio" id="opcao10" name="eliminacoes" value="Eliminações fisiológicas presentes em WC">
           <label for="opcao10">Eliminações fisiológicas presentes em WC</label><br>
           <input type="radio" id="opcao11" name="eliminacoes" value="Ausência de eliminações fisiológicas">
-          <label for="opcao11">Ausência de eliminações fisiológicas</label><br>
-          <input type="text" id="dias_elim" name="dias_elim" placeholder="Dias" style="margin-left: 20px;"><br><br>
+          <label for="opcao11">Ausência de eliminações fisiológicas</label>
+          <input type="text" id="dias_elim" name="dias_elim" placeholder="Dias" style="margin-left: 20px;"><br>
+          <input type="radio" id="opcao12" name="eliminacoes" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br><br>
+          
           <h3>Diurese:</h3>
           <input type="radio" id="opcao12" name="diurese" value="Diurese espontânea presente">
           <label for="opcao12">Diurese espontânea presente</label><br>
           <input type="radio" id="opcao13" name="diurese" value="Ausência de diurese espontânea">
-          <label for="opcao13">Ausência de diurese espontânea</label><br>
-          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="margin-left: 20px;"><br><br>
+          <label for="opcao13">Ausência de diurese espontânea</label>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="margin-left: 20px;"><br>
+          <input type="radio" id="opcao12" name="diurese" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br><br>
+          <br>
+          
           <h3>Deambulação:</h3>
           <input type="radio" id="opcao14" name="deambulacao" value="Deambulando com marcha preservada">
           <label for="opcao14">Deambulando com marcha preservada</label><br>
           <input type="radio" id="opcao15" name="deambulacao" value="Marcha alterada">
-          <label for="opcao15">Marcha alterada</label><br><br>
+          <label for="opcao15">Marcha alterada</label><br>
+          <input type="radio" id="opcao12" name="opcao" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
+
           <h3>Pele:</h3>
           <input type="radio" id="opcao16" name="pele" value="Pele íntegra">
           <label for="opcao16">Pele íntegra</label><br>
@@ -118,8 +182,11 @@
           <label for="opcao17">Lesões cutâneas presentes em MI</label><br>
           <input type="radio" id="opcao17" name="pele" value="Lesões cutâneas presentes">
           <label for="opcao17">Lesões cutâneas presentes em MS</label><br>
+          <input type="radio" id="opcao12" name="pele" value="Não se aplica">
+          <label for="opcao12">Não se aplica</label><br>
+          <input type="text" id="dias_diur" name="dias_diur" placeholder="Dias" style="height: 30px;width: 320px;"><br><br>
           <br>
-      <label for="anotacao">observações adicionais:</label><br>
+          <label for="anotacao">Observações adicionais:</label><br>
           <textarea id="anotacao" name="anotacao" rows="5" cols="50"></textarea><br><br>
       </form>
 

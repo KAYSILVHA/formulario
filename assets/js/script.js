@@ -78,23 +78,3 @@ function calcularPontuacao() {
 
 
 
-function verificarResposta() {
-  var murmuros = document.querySelector('input[name="murmurios"]:checked');
-  var ruidos = document.querySelector('input[name="ruidos"]:checked');
-
-  var resultado = "";
-
-  if (murmuros) {
-      resultado += "Murmúrios Vesiculares: " + murmuros.value + "<br>";
-  }
-
-  if (ruidos) {
-      resultado += "Ruídos Adventícios: " + ruidos.value + "<br>";
-  }
-
-  if (resultado === "") {
-      resultado = "Nenhuma opção selecionada";
-  }
-
-  document.getElementById("resultado").innerHTML = resultado;
-}
